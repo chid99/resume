@@ -1,0 +1,240 @@
+*{
+   
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f"
+        "w"
+}
+ */
+/* step one - build your grid */
+
+.container {
+    border-top: 3px solid rgb(131, 201, 1);
+    border-top: 2px solid rgb(158, 238, 9);
+    border-top: 2px solid rgb(138, 209, 5);
+    border-right: 4px solid lightseagreen;
+    padding-right: 20px;
+    border-left: 4px solid rgb(31, 108, 170);
+    padding-left: 20px;
+    border-bottom: 4px solid rgb(204, 21, 106);
+    padding-bottom: 20px;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "q q q q q q c c c c c c"
+        "b b b b b b w w w w w w"
+        "s s s s s s w w w w w w"
+        "s s s s s s w w w w w w"
+        "s s s s s s a a a a a a";
+        
+        
+}
+li{
+    font-weight: 500;
+    padding:18px;
+  
+
+}
+
+.date{
+    font-weight: 300;
+}
+body{
+    
+    font-size: 1em;
+    font-family: 'Raleway';
+}
+.desX{
+    font-size: larger;
+    font-weight:800;
+}
+.description{
+    font-weight: 700;
+    font-size: large;
+}
+.des1{
+    font-weight: 500;
+}
+.des2{
+    font-weight: 400;
+}
+.desA{
+    font-weight: 300;
+}
+.des3{
+    font-size: larger;
+    font-weight: 700;
+}
+.des4{
+    font-weight: 500;
+}
+.des5{
+    font-weight: 400;
+}
+.desB{
+    font-weight: 300;
+}
+.des6{
+    font-weight: 800;
+}
+.des7{
+    font-weight: 500;
+}
+.des8{
+    font-weight: 500;
+}
+.des9{
+    font-weight: 400;
+}
+.desC{
+    font-weight: 300;
+}
+.des10{
+    font-weight: 700;
+}
+.des11{
+    font-weight: 500;
+}
+.des12{
+    font-weight: 300;
+}
+
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 3em;
+    
+
+}
+
+h2{
+    padding-top:35px;
+}
+
+h3{
+    padding-top:45px;
+}
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "q"
+        "h"
+        "c"
+        "b"
+        "a"
+        "s"
+        "w"
+        "f";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+blockquote {
+    grid-area: q;
+    font-weight:300;
+    padding-bottom:30px;
+}
+
+header {
+    grid-area: h;
+    padding-top: 4px;
+}
+.contact{
+    grid-area: c;
+ 
+}
+
+
+.technical {
+    grid-area: b;
+}
+
+.work {
+    padding-left: 2px;
+    font-weight: 800px;
+    
+    grid-area: w;
+  
+
+}
+
+
+.awards {
+    grid-area: a;
+}
+.vl {
+    border-right: 6px solid rgb(158, 238, 9);
+    height: 100px;
+  }
+  .v2 {
+    border-right: 6px solid rgb(131, 201, 1);
+    height: 100px;
+  }
+  .v3 {
+    border-right: 6px solid rgb(8, 214, 152);
+    height: 100px;
+  }
+  .v4 {
+    border-right: 6px solid rgb(26, 149, 187);
+    height: 100px;
+  }
+  .v4 {
+    border-right: 6px solid rgb(34, 132, 224);
+    height: 100px;
+  }
+
+.practical{
+    grid-area: s;
+    border-left: 6px solid green;
+  height: 500px;
+    /* grid-column-start: 6;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    z-index: 1;
+    border-bottom: 5px solid rgb(116, 238, 15)
+    /* padding-top: 150px;
+    border-right: 4px solid lightseagreen;
+    padding-right: 20px;
+     */ 
+
+}
+
+footer{
+    grid-area: f;
+}
